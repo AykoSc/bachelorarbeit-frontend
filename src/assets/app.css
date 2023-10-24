@@ -1,0 +1,34 @@
+/* If the page seems too zoomed in
+body {
+    transform: scale(0.7);
+    transform-origin: top;
+}
+*/
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.warning {
+    color: orange;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.large-text {
+    font-size: 30px;
+}
+
+.very-large-text {
+    font-size: 60px;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
