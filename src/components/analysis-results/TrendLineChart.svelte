@@ -3,7 +3,7 @@
     import LineChart from "../LineChart.svelte";
     import type {News} from "../../lib/DBItems";
     import type {ChartData, ChartOptions} from "chart.js";
-    import {HOURS_PER_DAY, MILLISECONDS_PER_SECOND, SECONDS_PER_HOUR} from "../../stores/conversion";
+    import {HOURS_PER_DAY, MILLISECONDS_PER_SECOND, SECONDS_PER_HOUR} from "../../assets/conversion";
     import {fetchNewsOfEachIndicator} from "../../lib/api.js";
 
     export let selectedCompany: string;
@@ -37,9 +37,11 @@
                                                  maxSentiment: number) => {
         try {
             if (indicatorName !== "") {
-                fetchedNews = await fetchNewsOfIndicator(selectedCompany, indicatorName, selectedDateRange, maxSentiment);
+                fetchedNews = await fetchNewsOfIndicator(selectedCompany, indicatorName, selectedDateRange,
+                    maxSentiment);
             } else {
-                const newsByIndicators = await fetchNewsOfEachIndicator(selectedCompany, selectedDateRange, maxSentiment);
+                const newsByIndicators = await fetchNewsOfEachIndicator(selectedCompany, selectedDateRange,
+                    maxSentiment);
                 fetchedNews = (Object.values(newsByIndicators) as News[]).reduce((combinedNews, newsArray) => {
                     return combinedNews.concat(newsArray);
                 }, []);
@@ -144,7 +146,8 @@
 <div>
     <div>
             <label for="minimumAverageSelect">
-                <input bind:checked={selectedTrendCalculationAsMinimum} type="checkbox" id="minimumAverageSelect" name="minimumAverageSelect" role="switch">
+                <input bind:checked={selectedTrendCalculationAsMinimum} type="checkbox" id="minimumAverageSelect"
+                       name="minimumAverageSelect" role="switch">
                 {#if selectedTrendCalculationAsMinimum}
                     Zeige Minimum
                 {:else}

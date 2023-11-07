@@ -25,11 +25,13 @@
         }
     };
 
-    const fetchAllIndicatorGradesHandler = async (selectedCompany: string, selectedDateRange: string, selectedIndicator: string, maxSentiment: number) => {
+    const fetchAllIndicatorGradesHandler = async (selectedCompany: string, selectedDateRange: string,
+                                                  selectedIndicator: string, maxSentiment: number) => {
         try {
             let response: Array<IndicatorStats>
             if (selectedIndicator !== "") {
-                response = await fetchIndicatorStats(selectedCompany, selectedDateRange, maxSentiment, selectedIndicator);
+                response = await fetchIndicatorStats(selectedCompany, selectedDateRange, maxSentiment,
+                    selectedIndicator);
             } else {
                 response = await fetchIndicatorStats(selectedCompany, selectedDateRange, maxSentiment);
             }

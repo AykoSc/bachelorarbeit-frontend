@@ -8,7 +8,8 @@
     let userFeedback = {message: "", isSuccess: true};
     let news = null;
 
-    const fetchMinSentimentNewsHandler = async (selectedCompany: string, selectedIndicator: string, selectedDateRange: string) => {
+    const fetchMinSentimentNewsHandler = async (selectedCompany: string, selectedIndicator: string,
+                                                selectedDateRange: string) => {
         try {
             news = await fetchLowestSentimentNewsItemOfCompany(selectedCompany, selectedIndicator, selectedDateRange);
         } catch (error) {

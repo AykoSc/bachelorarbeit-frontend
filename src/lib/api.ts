@@ -1,6 +1,6 @@
 import type {Company, SustainabilityIndicator} from "./DBItems";
 
-const BASE_URL = "http://127.0.0.1:8000"; // Base URL of FastAPI, should be changed in production
+const BASE_URL = "http://127.0.0.1:8000"; // Base URL of FastAPI, should be changed at deployment
 const COMPANY_NAME = "company_name";
 const INDICATOR_NAME = "indicator_name";
 const DATE_RANGE = "date_range";
@@ -34,7 +34,8 @@ export async function fetchIndicators() {
     return result.map((indicator: SustainabilityIndicator) => indicator.name);
 }
 
-export async function fetchIndicatorStats(companyName: string, dateRange: string, maxSentiment: number, indicatorName: string = "") {
+export async function fetchIndicatorStats(companyName: string, dateRange: string,
+                                          maxSentiment: number, indicatorName: string = "") {
     return fetchWithSearchParams("indicator_stats", {
         [COMPANY_NAME]: companyName,
         [INDICATOR_NAME]: indicatorName,
@@ -43,7 +44,8 @@ export async function fetchIndicatorStats(companyName: string, dateRange: string
     });
 }
 
-export async function doNewsExist(companyName: string, dateRange: string, indicatorName: string, maxSentiment: number) {
+export async function doNewsExist(companyName: string, dateRange: string,
+                                  indicatorName: string, maxSentiment: number) {
     return fetchWithSearchParams("do_news_exist", {
         [COMPANY_NAME]: companyName,
         [DATE_RANGE]: dateRange,
@@ -52,7 +54,8 @@ export async function doNewsExist(companyName: string, dateRange: string, indica
     });
 }
 
-export async function fetchLowestSentimentNewsItemOfCompany(companyName: string, selectedIndicator: string, dateRange: string) {
+export async function fetchLowestSentimentNewsItemOfCompany(companyName: string, selectedIndicator: string,
+                                                            dateRange: string) {
     return fetchWithSearchParams("news_minimum", {
         [COMPANY_NAME]: companyName,
         [INDICATOR_NAME]: selectedIndicator,
@@ -60,7 +63,8 @@ export async function fetchLowestSentimentNewsItemOfCompany(companyName: string,
     });
 }
 
-export async function fetchNewsOfIndicator(companyName: string, indicatorName: string, dateRange: string, maxSentiment: number) {
+export async function fetchNewsOfIndicator(companyName: string, indicatorName: string,
+                                           dateRange: string, maxSentiment: number) {
     return fetchWithSearchParams("news", {
         [COMPANY_NAME]: companyName,
         [INDICATOR_NAME]: indicatorName,
@@ -69,7 +73,8 @@ export async function fetchNewsOfIndicator(companyName: string, indicatorName: s
     });
 }
 
-export async function fetchNewsOfEachIndicator(companyName: string, dateRange: string, maxSentiment: number) {
+export async function fetchNewsOfEachIndicator(companyName: string, dateRange: string,
+                                               maxSentiment: number) {
     let indicators = await fetchIndicators();
 
     const newsByIndicator = {};

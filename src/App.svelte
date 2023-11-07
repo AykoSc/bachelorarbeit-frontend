@@ -19,8 +19,11 @@
 
 <main class="container">
     <Router>
-        <Route component={AnalysisResults} path="/view-analysis-results"/>
-        <Route component={ManageData} path="/manage-data"/>
-        <Route component={About} path="/about"/>
+        <Route component={AnalysisResults}
+               path="/view-analysis-results"/>
+        <Route component={ManageData}
+               path="/manage-data"/>
+        <Route component={About}
+               path="/about"/>
     </Router>
 </main>

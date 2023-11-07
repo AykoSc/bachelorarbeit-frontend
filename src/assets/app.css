@@ -1,4 +1,4 @@
-/* If the page seems too zoomed in
+/* If the page seems too zoomed in, this can be used as a workaround.
 body {
     transform: scale(0.7);
     transform-origin: top;

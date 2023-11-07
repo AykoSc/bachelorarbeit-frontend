@@ -54,11 +54,11 @@
 
     <section id="newsBySustainabilityIndicators">
         <hgroup>
-            <h3>Analysierte Nachrichten pro Indikator</h3>
-            <h4>
+            <h2>Analysierte Nachrichten pro Indikator</h2>
+            <h3>
                 Zu jedem Indikator ist die Anzahl analysierter Nachrichtenbeiträge, das Minimum sowie eine
                 detaillierte Auflistung der hierzu genutzten Nachrichtenbeiträge einsehbar.
-            </h4>
+            </h3>
         </hgroup>
         <IndicatorNews selectedCompany={selectedCompany} selectedDateRange={selectedDateRange} selectedIndicator={selectedIndicator} maxSentiment={selectedSentiment}/>
     </section>

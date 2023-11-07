@@ -1,24 +1,3 @@
-<script lang="ts">
-    let selectedCompany = "";
-    let selectedDateRange = "";
-    let selectedIndicator = "";
-    let selectedSentiment = 2;
-    let selectedTrendCalculationAsMinimum = true;
-    let doRelevantNewsExist = false;
-
-    const doNewsExistHandler = async (selectedCompany: string, selectedDateRange: string, selectedIndicator: string, selectedSentiment: number) => {
-        try {
-            doRelevantNewsExist = await doNewsExist(selectedCompany, selectedDateRange, selectedIndicator, selectedSentiment);
-        } catch (error) {
-            console.error(error.message);
-        }
-    };
-
-    $: doNewsExistHandler(selectedCompany, selectedDateRange, selectedIndicator, selectedSentiment);
-    $: isSelectionComplete = selectedCompany && selectedDateRange;
-</script>
-
-
 <section id="projectCreation">
     <h2>Wie das Projekt entstand</h2>
     <p>
@@ -34,7 +13,8 @@
     <p>
         Im Frontend wurde größtenteils Svelte in Kombination mit Vite.js und TypeScript verwendet.
         Im Backend wurde hingegen ausschließlich Python verwendet.<br>
-        Generell wurden die Technologien gewählt, die im <a href="https://survey.stackoverflow.co/2023/" target="_blank">Stackoverflow Developer Survey</a>
+        Generell wurden die Technologien gewählt, die im <a href="https://survey.stackoverflow.co/2023/"
+                                                            target="_blank">Stackoverflow Developer Survey</a>
         sehr hoch bewertet wurden.
     </p>
 </section>
@@ -43,7 +23,8 @@
     <h2>Funktionalitäten</h2>
     <p>
         Der Nutzer hat die Möglichkeit, die folgenden Funktionen zu verwenden, um über die Nachhaltigkeit von
-        Unternehmen bzw. die Wahrnehmung von dieser in Nachrichtenartikeln informiert zu bleiben und die Backend-Analyse zu verwalten.
+        Unternehmen bzw. die Wahrnehmung von dieser in Nachrichtenartikeln informiert zu bleiben und
+        die Backend-Analyse zu verwalten.
     </p>
 
     <h3>Frontend</h3>
@@ -66,9 +47,9 @@
 <section id="details">
     <h2>Details</h2>
     <p>
-        Genauere Informationen sind den Readme's, jeweils für das frontend und das backend zu entnehmen.
-        Dort sind u.a. Details zu den hier bereits genannten Kategorien, als auch weitere Informationen, wie
-        zukünftig mögliche Verbesserungen, enthalten. Auch technische Details, wie die API-Schnittstelle, sowie
-        das Datenbankmodell, sind dort enthalten.
+        Genauere Informationen sind den Readmes, jeweils für das Frontend und das Backend zu entnehmen.
+        Dort sind u. a. Details zu den hier bereits genannten Kategorien, als auch weitere Informationen, wie
+        mögliche Verbesserungen, enthalten. Auch technische Details, wie die API-Schnittstelle, sowie
+        das Datenbankmodell, sind dort verfügbar.
     </p>
 </section>

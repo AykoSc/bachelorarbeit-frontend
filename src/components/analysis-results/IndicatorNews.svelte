@@ -11,7 +11,8 @@
     let userFeedback = {message: "", isSuccess: true};
     let newsByIndicator: Record<string, News[]> = {};
 
-    const fetchNewsOfEachIndicatorHandler = async (selectedCompany: string, selectedDateRange: string, maxSentiment: number) => {
+    const fetchNewsOfEachIndicatorHandler = async (selectedCompany: string, selectedDateRange: string,
+                                                   maxSentiment: number) => {
         try {
             newsByIndicator = await fetchNewsOfEachIndicator(selectedCompany, selectedDateRange, maxSentiment);
         } catch (error) {

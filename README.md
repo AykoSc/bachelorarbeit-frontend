@@ -12,6 +12,7 @@ by Ayko Schwedler as part of the bachelor thesis.
 1. Install node.js.
 2. Install all dependencies from the package.json with `npm install`.
 3. Start server with `npm run dev`.
+4. Standard URL for access is http://localhost:5173 and can also be seen in the console.
 
 ## Functionality
 
@@ -23,6 +24,14 @@ The website consists of three pages. A dark mode is also available.
 - **Add Synonym to Company**: Assigns a synonym to an existing company. This allows synonyms to be recognised in the analysis and improves the results.
 - **Remove company**: Fully removes the company and everything related to it from the analysis and database.
 - **Remove Synonym to Company**: Removes a synonym from the company, so that the synonym is no longer included in news analysis/searches.
+
+### Analysis results
+
+Filter:
+- Company: The company to view for which to show the results.
+- Time span: The time span in which the news to analyze should be considered. Selectable are "today", "this week", "this month", "this year", "all time".
+- Indicators: Either "all indicators", or a single indicator can be chosen.
+- Min. sentiment: The lower threshold at which news will be considered for analysis.
 
 Categories:
 - Lowest rated news item**: This news item has the lowest sentiment rating. The scale goes from 0 to 10, so 5 can be interpreted as average.
