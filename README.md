@@ -28,15 +28,15 @@ The website consists of three pages. A dark mode is also available.
 ### Analysis results
 
 Filter:
-- Company: The company to view for which to show the results.
-- Time span: The time span in which the news to analyze should be considered. Selectable are "today", "this week", "this month", "this year", "all time".
-- Indicators: Either "all indicators", or a single indicator can be chosen.
-- Min. sentiment: The lower threshold at which news will be considered for analysis.
+- **Company**: The company to view for which to show the results.
+- **Time span**: The time span in which the news to analyze should be considered. Selectable are "today", "this week", "this month", "this year", "all time".
+- **Indicators**: Either "all indicators", or a single indicator can be chosen.
+- **Min. sentiment**: The lower threshold at which news will be considered for analysis.
 
 Categories:
-- Lowest rated news item**: This news item has the lowest sentiment rating. The scale goes from 0 to 10, so 5 can be interpreted as average.
+- **Lowest rated news item**: This news item has the lowest sentiment rating. The scale goes from 0 to 10, so 5 can be interpreted as average.
 - **Analysed news items per indicator**: For each indicator, the number of analysed news articles, the minimum and a detailed list of the news articles used for this indicator can be viewed.
-- Statistics of the sustainability indicators**: In addition to the other available statistics, the minimum, average and maximum of each selected indicator are displayed here.
+- **Statistics of the sustainability indicators**: In addition to the other available statistics, the minimum, average and maximum of each selected indicator are displayed here.
 - **Sentiment Trends**: The selected period is divided into ten points in time and starts at the beginning of the selected period. The period shifts to the start of the first item within that period.
 
 ## Screenshots
